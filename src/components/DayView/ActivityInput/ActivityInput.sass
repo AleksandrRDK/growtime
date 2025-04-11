@@ -1,0 +1,87 @@
+.time-spent
+    margin-top: 15px
+    label
+        font-weight: bold
+        display: block
+    .add-btn
+        margin-top: 10px
+        padding: 8px 16px
+        background-color: #007bff
+        color: white
+        border: none
+        border-radius: 8px
+        cursor: pointer
+        font-size: 15px
+        font-weight: bold
+        box-shadow: 0 4px 8px rgba(0, 147, 233, 0.2)
+        transition: all 0.3s ease
+
+        &:hover
+            transform: scale(1.03)
+            box-shadow: 0 6px 12px rgba(0, 147, 233, 0.3)
+    .add-popup
+        margin-top: 10px
+        padding: 10px
+        background: #f9f9f9
+        border: 1px solid #ccc
+        border-radius: 8px
+        display: flex
+        flex-direction: column
+        gap: 8px
+        input, select
+            padding: 6px
+            border: 1px solid #ccc
+            border-radius: 5px
+            font-size: 14px
+            width: 100%
+        button
+            align-self: flex-end
+            padding: 6px 12px
+            background-color: #007BFF
+            color: white
+            border: none
+            border-radius: 5px
+            cursor: pointer
+            font-size: 14px
+            transition: background 0.2s
+            &:hover
+                background-color: #0069d9
+    .activities-list
+        margin-top: 15px
+
+        .activity-item
+            position: relative
+            margin-top: 10px
+            padding: 12px
+            background-color: #ffffff
+            border: 1px solid #dcdcdc
+            border-radius: 10px
+            font-size: 14px
+            color: #333
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05)
+
+        .activity-item__remove-btn
+            position: absolute
+            top: 8px
+            right: 10px
+            background: #ffe6ea
+            border: none
+            width: 24px
+            height: 24px
+            border-radius: 50%
+            font-size: 16px
+            font-weight: bold
+            color: #ff4d4d
+            cursor: pointer
+            display: flex
+            align-items: center
+            justify-content: center
+            transition: background 0.2s ease, color 0.2s ease
+            &:hover
+                background: #ffd6dc
+                color: #e60026
+    .progress-bar
+        height: 4px
+        background-color: #4caf50
+        margin-top: 8px
+        border-radius: 2px

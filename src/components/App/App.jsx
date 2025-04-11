@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Header from "../Header/Header";
 import PreviousDayView from "../PreviousDayView/PreviousDayView";
 import DayView from "../DayView/DayView";
@@ -7,17 +9,27 @@ import Calendar from "../Calendar/Calendar";
 import './App.sass';
 
 function App() {
+	const today = new Date();
+	const [selectedDay, setSelectedDay] = useState(today);
+
 	return (
 		<div className="app">
 			<div className="app__wrapper">
-				<Header />
+				<Header
+					selectedDay = {selectedDay}
+					setSelectedDay = {setSelectedDay}
+					today = {today}
+				/>
 				<div className="main-content">
-					<PreviousDayView/>
-					<DayView />
+					<PreviousDayView selectedDay = {selectedDay}/>
+					<DayView selectedDay = {selectedDay}/>
 					<ComparisonBox />
 				</div>
 			</div>
-			<Calendar />
+			<Calendar
+				selectedDay={selectedDay}
+				setSelectedDay={setSelectedDay}
+			/>
 		</div>
 	);
 }

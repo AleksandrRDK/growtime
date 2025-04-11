@@ -1,9 +1,16 @@
 import "./PreviousDayView.sass";
 
-const PreviousDayView = () => {
+import { format } from 'date-fns';
+import { ru } from 'date-fns/locale';
+
+const PreviousDayView = ({selectedDay}) => {
+    const prevDate = new Date(selectedDay);
+    prevDate.setDate(prevDate.getDate() - 1);
+    const formattedDate = format(prevDate, 'd MMMM', { locale: ru });
+
     return (
         <div className="previous-day-view">
-            <h2>31 марта</h2>
+            <h2>{formattedDate}</h2>
 
             <div className="readonly-section">
                 <label>Что ты сделал:</label>
